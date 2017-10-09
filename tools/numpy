@@ -1,0 +1,8 @@
+You must give at least one requirement to uninstall (see "pip help uninstall")
+Exception information:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/pip/basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "/usr/lib/python2.7/site-packages/pip/commands/uninstall.py", line 74, in run
+    '"pip help %(name)s")' % dict(name=self.name)
+InstallationError: You must give at least one requirement to uninstall (see "pip help uninstall")

@@ -1,0 +1,23 @@
+train_net: "../models/tianchi/VGG16/faster_rcnn_end2end/train.prototxt"
+type: "SGD"
+base_lr: 0.01
+#base_lr: 0.00000001
+lr_policy: "step"
+gamma: 0.1
+#iter per epoch * 40
+stepsize: 400
+display: 1 
+#average_loss: 1
+iter_size: 1 
+momentum: 0.9
+weight_decay: 0.000001
+#weight_decay: 0.0
+# We disable standard caffe solver snapshotting and implement our own snapshot
+# function
+snapshot: 0
+# We still use the snapshot prefix, though
+snapshot_prefix: "tianchi_faster_rcnn"
+#mode: "CPU"
+#debug_info: true
+regularization_type: "L2"
+#clip_gradients: 0.001
