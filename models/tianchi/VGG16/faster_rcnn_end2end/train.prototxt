@@ -55,7 +55,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "preBlock_relu1"
       type: "ReLU"
@@ -63,7 +63,7 @@ layer {
       top: "preBlock_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "preBlock_2"
   type: "Convolution"
@@ -108,7 +108,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "preBlock_relu2"
       type: "ReLU"
@@ -116,7 +116,7 @@ layer {
       top: "preBlock_relu2"
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "pool_0"
       type: "Pooling"
@@ -128,7 +128,7 @@ layer {
         pool: MAX
       }
 }
-    
+
 layer {
   name: "forw_1_1_shortcut_conv"
   type: "Convolution"
@@ -173,7 +173,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_1_1_conv1"
   type: "Convolution"
@@ -218,7 +218,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "forw_1_1_relu1"
       type: "ReLU"
@@ -226,7 +226,7 @@ layer {
       top: "forw_1_1_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_1_1_conv2"
   type: "Convolution"
@@ -271,7 +271,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       bottom: "forw_1_1_bn2"
       bottom: "forw_1_1_shortcut_bn"
@@ -279,7 +279,7 @@ layer {
       name: "forw_1_1_res_elt"
       type: "Eltwise"
 }
-    
+
 layer {
       name: "forw_1_1_res"
       type: "ReLU"
@@ -287,7 +287,7 @@ layer {
       top: "forw_1_1_res"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_1_2_conv1"
   type: "Convolution"
@@ -332,7 +332,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "forw_1_2_relu1"
       type: "ReLU"
@@ -340,7 +340,7 @@ layer {
       top: "forw_1_2_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_1_2_conv2"
   type: "Convolution"
@@ -385,7 +385,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       bottom: "forw_1_2_bn2"
       bottom: "forw_1_1_res"
@@ -393,7 +393,7 @@ layer {
       name: "forw_1_2_res_elt"
       type: "Eltwise"
 }
-    
+
 layer {
       name: "forw_1_2_res"
       type: "ReLU"
@@ -401,7 +401,7 @@ layer {
       top: "forw_1_2_res"
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "pool_1"
       type: "Pooling"
@@ -413,7 +413,7 @@ layer {
         pool: MAX
       }
 }
-    
+
 layer {
   name: "forw_2_1_shortcut_conv"
   type: "Convolution"
@@ -458,7 +458,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_2_1_conv1"
   type: "Convolution"
@@ -503,7 +503,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "forw_2_1_relu1"
       type: "ReLU"
@@ -511,7 +511,7 @@ layer {
       top: "forw_2_1_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_2_1_conv2"
   type: "Convolution"
@@ -556,7 +556,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       bottom: "forw_2_1_bn2"
       bottom: "forw_2_1_shortcut_bn"
@@ -564,7 +564,7 @@ layer {
       name: "forw_2_1_res_elt"
       type: "Eltwise"
 }
-    
+
 layer {
       name: "forw_2_1_res"
       type: "ReLU"
@@ -572,7 +572,7 @@ layer {
       top: "forw_2_1_res"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_2_2_conv1"
   type: "Convolution"
@@ -617,7 +617,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "forw_2_2_relu1"
       type: "ReLU"
@@ -625,7 +625,7 @@ layer {
       top: "forw_2_2_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_2_2_conv2"
   type: "Convolution"
@@ -670,7 +670,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       bottom: "forw_2_2_bn2"
       bottom: "forw_2_1_res"
@@ -678,7 +678,7 @@ layer {
       name: "forw_2_2_res_elt"
       type: "Eltwise"
 }
-    
+
 layer {
       name: "forw_2_2_res"
       type: "ReLU"
@@ -686,7 +686,7 @@ layer {
       top: "forw_2_2_res"
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "pool_2"
       type: "Pooling"
@@ -698,7 +698,7 @@ layer {
         pool: MAX
       }
 }
-    
+
 layer {
   name: "forw_3_1_conv1"
   type: "Convolution"
@@ -743,7 +743,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "forw_3_1_relu1"
       type: "ReLU"
@@ -751,7 +751,7 @@ layer {
       top: "forw_3_1_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_3_1_conv2"
   type: "Convolution"
@@ -796,7 +796,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       bottom: "forw_3_1_bn2"
       bottom: "pool_2"
@@ -804,7 +804,7 @@ layer {
       name: "forw_3_1_res_elt"
       type: "Eltwise"
 }
-    
+
 layer {
       name: "forw_3_1_res"
       type: "ReLU"
@@ -812,7 +812,7 @@ layer {
       top: "forw_3_1_res"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_3_2_conv1"
   type: "Convolution"
@@ -857,7 +857,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "forw_3_2_relu1"
       type: "ReLU"
@@ -865,7 +865,7 @@ layer {
       top: "forw_3_2_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_3_2_conv2"
   type: "Convolution"
@@ -910,7 +910,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       bottom: "forw_3_2_bn2"
       bottom: "forw_3_1_res"
@@ -918,7 +918,7 @@ layer {
       name: "forw_3_2_res_elt"
       type: "Eltwise"
 }
-    
+
 layer {
       name: "forw_3_2_res"
       type: "ReLU"
@@ -926,7 +926,7 @@ layer {
       top: "forw_3_2_res"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_3_3_conv1"
   type: "Convolution"
@@ -971,7 +971,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "forw_3_3_relu1"
       type: "ReLU"
@@ -979,7 +979,7 @@ layer {
       top: "forw_3_3_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_3_3_conv2"
   type: "Convolution"
@@ -1024,7 +1024,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       bottom: "forw_3_3_bn2"
       bottom: "forw_3_2_res"
@@ -1032,7 +1032,7 @@ layer {
       name: "forw_3_3_res_elt"
       type: "Eltwise"
 }
-    
+
 layer {
       name: "forw_3_3_res"
       type: "ReLU"
@@ -1040,7 +1040,7 @@ layer {
       top: "forw_3_3_res"
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "pool_3"
       type: "Pooling"
@@ -1052,7 +1052,7 @@ layer {
         pool: MAX
       }
 }
-    
+
 layer {
   name: "forw_4_1_conv1"
   type: "Convolution"
@@ -1097,7 +1097,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "forw_4_1_relu1"
       type: "ReLU"
@@ -1105,7 +1105,7 @@ layer {
       top: "forw_4_1_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_4_1_conv2"
   type: "Convolution"
@@ -1150,7 +1150,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       bottom: "forw_4_1_bn2"
       bottom: "pool_3"
@@ -1158,7 +1158,7 @@ layer {
       name: "forw_4_1_res_elt"
       type: "Eltwise"
 }
-    
+
 layer {
       name: "forw_4_1_res"
       type: "ReLU"
@@ -1166,7 +1166,7 @@ layer {
       top: "forw_4_1_res"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_4_2_conv1"
   type: "Convolution"
@@ -1211,7 +1211,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "forw_4_2_relu1"
       type: "ReLU"
@@ -1219,7 +1219,7 @@ layer {
       top: "forw_4_2_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_4_2_conv2"
   type: "Convolution"
@@ -1264,7 +1264,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       bottom: "forw_4_2_bn2"
       bottom: "forw_4_1_res"
@@ -1272,7 +1272,7 @@ layer {
       name: "forw_4_2_res_elt"
       type: "Eltwise"
 }
-    
+
 layer {
       name: "forw_4_2_res"
       type: "ReLU"
@@ -1280,7 +1280,7 @@ layer {
       top: "forw_4_2_res"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_4_3_conv1"
   type: "Convolution"
@@ -1325,7 +1325,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "forw_4_3_relu1"
       type: "ReLU"
@@ -1333,7 +1333,7 @@ layer {
       top: "forw_4_3_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "forw_4_3_conv2"
   type: "Convolution"
@@ -1378,7 +1378,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       bottom: "forw_4_3_bn2"
       bottom: "forw_4_2_res"
@@ -1386,7 +1386,7 @@ layer {
       name: "forw_4_3_res_elt"
       type: "Eltwise"
 }
-    
+
 layer {
       name: "forw_4_3_res"
       type: "ReLU"
@@ -1394,7 +1394,7 @@ layer {
       top: "forw_4_3_res"
       engine: "MKL2017"
 }
-    
+
 #=====deconvolution part==================================
 layer {
   name: "path1_deconv"
@@ -1410,7 +1410,7 @@ layer {
     stride: 2
     kernel_size: 2
     bias_term: false
-    weight_filler: { type: "gaussian" 
+    weight_filler: { type: "gaussian"
                      std: 0.01 }
   }
 }
@@ -1435,7 +1435,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "path1_relu"
       type: "ReLU"
@@ -1443,7 +1443,7 @@ layer {
       top: "path1_relu"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "cat1"
   bottom: "path1_relu"
@@ -1499,7 +1499,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "back_3_1_conv1"
   type: "Convolution"
@@ -1544,7 +1544,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "back_3_1_relu1"
       type: "ReLU"
@@ -1552,7 +1552,7 @@ layer {
       top: "back_3_1_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "back_3_1_conv2"
   type: "Convolution"
@@ -1597,7 +1597,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       bottom: "back_3_1_bn2"
       bottom: "back_3_1_shortcut_bn"
@@ -1605,7 +1605,7 @@ layer {
       name: "back_3_1_res_elt"
       type: "Eltwise"
 }
-    
+
 layer {
       name: "back_3_1_res"
       type: "ReLU"
@@ -1613,7 +1613,7 @@ layer {
       top: "back_3_1_res"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "back_3_2_conv1"
   type: "Convolution"
@@ -1658,7 +1658,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "back_3_2_relu1"
       type: "ReLU"
@@ -1666,7 +1666,7 @@ layer {
       top: "back_3_2_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "back_3_2_conv2"
   type: "Convolution"
@@ -1711,7 +1711,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       bottom: "back_3_2_bn2"
       bottom: "back_3_1_res"
@@ -1719,7 +1719,7 @@ layer {
       name: "back_3_2_res_elt"
       type: "Eltwise"
 }
-    
+
 layer {
       name: "back_3_2_res"
       type: "ReLU"
@@ -1727,7 +1727,7 @@ layer {
       top: "back_3_2_res"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "back_3_3_conv1"
   type: "Convolution"
@@ -1772,7 +1772,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "back_3_3_relu1"
       type: "ReLU"
@@ -1780,7 +1780,7 @@ layer {
       top: "back_3_3_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "back_3_3_conv2"
   type: "Convolution"
@@ -1825,7 +1825,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       bottom: "back_3_3_bn2"
       bottom: "back_3_2_res"
@@ -1833,7 +1833,7 @@ layer {
       name: "back_3_3_res_elt"
       type: "Eltwise"
 }
-    
+
 layer {
       name: "back_3_3_res"
       type: "ReLU"
@@ -1841,7 +1841,7 @@ layer {
       top: "back_3_3_res"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "path2_deconv"
   type: "Deconvolution"
@@ -1856,7 +1856,7 @@ layer {
     stride: 2
     kernel_size: 2
     bias_term: false
-    weight_filler: { type: "gaussian" 
+    weight_filler: { type: "gaussian"
                      std: 0.01 }
   }
 }
@@ -1881,7 +1881,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "path2_relu"
       type: "ReLU"
@@ -1889,7 +1889,7 @@ layer {
       top: "path2_relu"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "cat2"
   bottom: "path2_relu"
@@ -1958,7 +1958,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "back_2_1_conv1"
   type: "Convolution"
@@ -2003,7 +2003,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "back_2_1_relu1"
       type: "ReLU"
@@ -2011,7 +2011,7 @@ layer {
       top: "back_2_1_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "back_2_1_conv2"
   type: "Convolution"
@@ -2056,7 +2056,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       bottom: "back_2_1_bn2"
       bottom: "back_2_1_shortcut_bn"
@@ -2064,7 +2064,7 @@ layer {
       name: "back_2_1_res_elt"
       type: "Eltwise"
 }
-    
+
 layer {
       name: "back_2_1_res"
       type: "ReLU"
@@ -2072,7 +2072,7 @@ layer {
       top: "back_2_1_res"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "back_2_2_conv1"
   type: "Convolution"
@@ -2117,7 +2117,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "back_2_2_relu1"
       type: "ReLU"
@@ -2125,7 +2125,7 @@ layer {
       top: "back_2_2_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "back_2_2_conv2"
   type: "Convolution"
@@ -2170,7 +2170,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       bottom: "back_2_2_bn2"
       bottom: "back_2_1_res"
@@ -2178,7 +2178,7 @@ layer {
       name: "back_2_2_res_elt"
       type: "Eltwise"
 }
-    
+
 layer {
       name: "back_2_2_res"
       type: "ReLU"
@@ -2186,7 +2186,7 @@ layer {
       top: "back_2_2_res"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "back_2_3_conv1"
   type: "Convolution"
@@ -2231,7 +2231,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       name: "back_2_3_relu1"
       type: "ReLU"
@@ -2239,7 +2239,7 @@ layer {
       top: "back_2_3_relu1"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "back_2_3_conv2"
   type: "Convolution"
@@ -2284,7 +2284,7 @@ layer {
       }
       engine: "MKL2017"
 }
-    
+
 layer {
       bottom: "back_2_3_bn2"
       bottom: "back_2_2_res"
@@ -2292,7 +2292,7 @@ layer {
       name: "back_2_3_res_elt"
       type: "Eltwise"
 }
-    
+
 layer {
       name: "back_2_3_res"
       type: "ReLU"
@@ -2300,7 +2300,7 @@ layer {
       top: "back_2_3_res"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "drop_1"
   type: "Dropout"
@@ -2342,7 +2342,7 @@ layer {
       top: "output_relu"
       engine: "MKL2017"
 }
-    
+
 layer {
   name: "output_conv2"
   type: "Convolution"
@@ -2430,7 +2430,7 @@ layer {
   python_param {
     module: 'rpn.tianchi_anchor_target_layer'
     layer: 'TianchiAnchorTargetLayer'
-    param_str: "'num_hard': 2"
+    param_str: "'num_hard': 5"
   }
 }
 
@@ -2473,4 +2473,3 @@ layer {
   loss_weight: 1
   smooth_l1_loss_param { sigma: 1.0 }
 }
-
