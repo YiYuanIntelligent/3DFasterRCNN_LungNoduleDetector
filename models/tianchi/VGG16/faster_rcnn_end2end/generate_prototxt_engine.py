@@ -1,3 +1,6 @@
+# --------------------------------------------------------
+# Written by HusonChen
+# --------------------------------------------------------
 import json
 from collections import OrderedDict
 
@@ -43,8 +46,8 @@ def deconv3d(name,output,kernel_size,padding,stride,bottom):
     print '    stride: %d' %stride
     print '    kernel_size: %d' %kernel_size
     print '    bias_term: false'
-    print '    weight_filler: { type: \"gaussian\" ' 
-    print '                     std: 0.01 }' 
+    print '    weight_filler: { type: \"gaussian\" '
+    print '                     std: 0.01 }'
     print '  }'
     print '}'
     print ''
@@ -253,8 +256,8 @@ print '''layer {
     shape {
       dim: 0  # copy the dimension from below
       dim: 24
-      dim: 24 
-      dim: 24 
+      dim: 24
+      dim: 24
       dim: %d
       dim: 5 # infer it from the other dimensions
     }
@@ -294,7 +297,7 @@ layer {
   propagate_down: 1
   propagate_down: 0
   top: "rpn_pos_loss_cls"
-  loss_weight: 0.5 
+  loss_weight: 0.5
   loss_param {
     normalize: 1
   }
@@ -308,7 +311,7 @@ layer {
   propagate_down: 1
   propagate_down: 0
   top: "rpn_neg_loss_cls"
-  loss_weight: 0.5 
+  loss_weight: 0.5
   loss_param {
     normalize: 1
   }

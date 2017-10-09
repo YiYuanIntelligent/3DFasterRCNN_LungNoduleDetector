@@ -1,8 +1,5 @@
 # --------------------------------------------------------
-# Faster R-CNN
-# Copyright (c) 2015 Microsoft
-# Licensed under The MIT License [see LICENSE for details]
-# Written by Ross Girshick and Sean Bell
+# Written by ShiShaohuai
 # --------------------------------------------------------
 
 import os
@@ -44,7 +41,7 @@ class TianchiAnchorTargetLayer(caffe.Layer):
 
         output = bottom[0].data.reshape(1, -1, 5)
         self._phase = 'TRAIN'
-        print 'output: ', output.shape 
+        print 'output: ', output.shape
         top[0].reshape(1, *output.shape)
         top[1].reshape(1, *output.shape)
         top[2].reshape(1, *output.shape)
@@ -106,7 +103,7 @@ class TianchiAnchorTargetLayer(caffe.Layer):
 
         #print 'bbox pos sigmoid: ', sigmoid(bbox_pos_output)
         #print 'pos sigmoid: ', sigmoid(cls_pos_output)
-        #print 'cls pos labels: ', cls_pos_labels 
+        #print 'cls pos labels: ', cls_pos_labels
         #print 'cls pos output: ', cls_pos_output
         #print 'neg :', cls_neg_output
         print 'neg sigmoid: ', sigmoid(cls_neg_output)
@@ -124,13 +121,13 @@ class TianchiAnchorTargetLayer(caffe.Layer):
         top[3].reshape(*bbox_pos_labels.shape)
         #for i in range(6):
         #    print 'top shape: top[{}]: {}'.format(i, top[i].data.shape)
-        top[0].data[...] = cls_output 
-        top[1].data[...] = cls_labels 
+        top[0].data[...] = cls_output
+        top[1].data[...] = cls_labels
 
-        #print 'cls_pos_output [top]: ', top[0].data 
-        #print 'cls_pos_labels [top]: ', top[1].data 
-        top[2].data[...] = bbox_pos_output 
-        top[3].data[...] = bbox_pos_labels 
+        #print 'cls_pos_output [top]: ', top[0].data
+        #print 'cls_pos_labels [top]: ', top[1].data
+        top[2].data[...] = bbox_pos_output
+        top[3].data[...] = bbox_pos_labels
         #print '{} layer forword time: {} s'.format(__file__, (time.time()-s))
         self.cls_pos_output = cls_pos_output
         self.cls_pos_labels = cls_pos_labels
@@ -145,24 +142,24 @@ class TianchiAnchorTargetLayer(caffe.Layer):
         #print('pos_idcs: {}'.format(self._pos_idcs))
         #print('neg_idcs: {}'.format(self._neg_idcs))
         #for i in range(6):
-        #    #print('bottom[{}] diff shape: {}'.format(i, bottom[i].diff.shape)) 
-        #    print('top[{}] diff shape: {}'.format(i, top[i].diff.shape)) 
+        #    #print('bottom[{}] diff shape: {}'.format(i, bottom[i].diff.shape))
+        #    print('top[{}] diff shape: {}'.format(i, top[i].diff.shape))
         #    #if not propagate_down[i]:
         #    #    continue
-#bottom[#i].diff[...] = top[i].diff 
-        #print('top[0] diff {}'.format(top[0].diff)) 
-        #print('top[2] diff {}'.format(top[2].diff)) 
-        #print('top[4] diff {}'.format(top[4].diff)) 
+#bottom[#i].diff[...] = top[i].diff
+        #print('top[0] diff {}'.format(top[0].diff))
+        #print('top[2] diff {}'.format(top[2].diff))
+        #print('top[4] diff {}'.format(top[4].diff))
         self.diff = np.zeros_like(bottom[0].diff, dtype=np.float32)
         self.diff.reshape(-1, 5)[self._idcs][:, 0] = top[0].diff
         self.diff.reshape(-1, 5)[self._pos_idcs, 1:] = top[2].diff
         bottom[0].diff[...] = self.diff
 
-        #bottom[0].diff.reshape(-1, 5)[self._idcs][:, 0] = top[0].diff 
-        #bottom[0].diff.reshape(-1, 5)[self._pos_idcs, 1:] = top[2].diff 
+        #bottom[0].diff.reshape(-1, 5)[self._idcs][:, 0] = top[0].diff
+        #bottom[0].diff.reshape(-1, 5)[self._pos_idcs, 1:] = top[2].diff
 
         #bottom[0].diff.reshape(-1, 5)[self._pos_idcs] = pos_diff
-        #bottom[0].diff.reshape(-1, 5)[self._neg_idcs][:, 0] = top[2].diff 
+        #bottom[0].diff.reshape(-1, 5)[self._neg_idcs][:, 0] = top[2].diff
 
         #print 'rpn layer bottom[0] after diff mean: {}'.format(np.mean(np.abs(bottom[0].diff)))
         #print 'rpn layer bottom[0] diff nonzero: {}'.format(np.count_nonzero(bottom[0].diff))
@@ -170,5 +167,3 @@ class TianchiAnchorTargetLayer(caffe.Layer):
     def reshape(self, bottom, top):
         """Reshaping happens during the call to forward."""
         pass
-
-

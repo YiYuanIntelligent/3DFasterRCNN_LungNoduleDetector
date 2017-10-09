@@ -1,8 +1,5 @@
 # --------------------------------------------------------
-# Fast R-CNN
-# Copyright (c) 2015 Microsoft
-# Licensed under The MIT License [see LICENSE for details]
-# Written by Ross Girshick
+# Written by HusonChen
 # --------------------------------------------------------
 
 """The data layer used during training to train a Fast R-CNN network.
@@ -331,4 +328,3 @@ class BlobFetcher(Process):
 
             blobs = get_minibatch(processed_ims, labels, coords)
             self._queue.put(blobs)
-

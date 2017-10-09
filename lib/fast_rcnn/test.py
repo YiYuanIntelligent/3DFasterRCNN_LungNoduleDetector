@@ -1,8 +1,5 @@
 # --------------------------------------------------------
-# Fast R-CNN
-# Copyright (c) 2015 Microsoft
-# Licensed under The MIT License [see LICENSE for details]
-# Written by Ross Girshick
+# Written by HusonChen
 # --------------------------------------------------------
 
 """Test a Fast R-CNN network on an imdb (image database)."""

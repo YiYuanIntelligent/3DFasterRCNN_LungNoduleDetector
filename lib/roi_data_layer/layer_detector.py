@@ -1,8 +1,5 @@
 # --------------------------------------------------------
-# Fast R-CNN
-# Copyright (c) 2015 Microsoft
-# Licensed under The MIT License [see LICENSE for details]
-# Written by Ross Girshick
+# Written by HusonChen
 # --------------------------------------------------------
 
 """The data layer used during training to train a Fast R-CNN network.
@@ -125,7 +122,7 @@ class RoIDataLayer(caffe.Layer):
 
         self._name_to_top_map = {}
         self._prefetch_process_list = []
-        
+
         # data blob: holds a batch of N images, each with 1 channels
         top[0].reshape(cfg.TRAIN.IMS_PER_BATCH, 1, cfg.crop_size_detector[0], cfg.crop_size_detector[1], cfg.crop_size_detector[2])
         self._name_to_top_map['data'] = 0

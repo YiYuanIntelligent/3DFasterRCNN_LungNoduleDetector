@@ -1,3 +1,6 @@
+# --------------------------------------------------------
+# Written by HusonChen
+# --------------------------------------------------------
 import os
 import errno
 from datasets.imdb import imdb
@@ -290,4 +293,3 @@ class tianchi(imdb):
         Return the default path where tianchi is expected to be installed.
         """
         return os.path.join(cfg.DATA_DIR, 'tianchi' )
-
