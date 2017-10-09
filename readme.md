@@ -1,3 +1,5 @@
+# 网络定义
+网络定义位于models/tianchi/VGG16/faster_rcnn_end2end/train.prototxt，同时定义了数据输入层，位于lib/roi_data_layer/layer.py，在setup函数指定了网络输入图像为batchsize\*1\*x\*y\*z的3D图像数据。
 # 数据存放
 数据存放在data/tianchi/data下面，Annotations和Images前缀分别代表标注文件和肺3D图。标注文件为_label后缀的npy文件，文件内容是二维数组如下
 ```
