@@ -23,7 +23,7 @@ python -u train_net.py --solver ../models/tianchi/VGG16/faster_rcnn_end2end/solv
 the model output in directory :output/faster_rcnn_end2end/tianchi_train<br>
 
 
-#Traverse the model, calculate the tnr and tpr in the validation set
+# Traverse the model, calculate the tnr and tpr in the validation set
 ```
 python -u val_net.py --solver ../models/tianchi/VGG16/faster_rcnn_end2end/solver_val.prototxt --imdb_train tianchi_train --imdb_val tianchi_val --iters 70000 --cfg ../experiments/cfgs/faster_rcnn_end2end.yml --rand
 ```
