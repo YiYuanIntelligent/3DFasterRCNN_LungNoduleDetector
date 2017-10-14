@@ -5,7 +5,7 @@
 &emsp;&emsp;This open-source project is developed by Shenzhen Yiyuan Intelligence Tech Co., LTD and Hong Kong Baptist University (HKBU) GPU High Performance Computing Laboratory.
 
 # NetWork
-The 3D RPN network : models/tianchi/VGG16/faster_rcnn_end2end/train.prototxt
+The 3D RPN network : models/tianchi/VGG16/faster_rcnn_end2end/train.prototxt<br>
 Input data layer: lib/roi_data_layer/layer.py 
 # Data Format
 The training data stored in directory :data/tianchi/data 
