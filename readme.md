@@ -34,4 +34,4 @@ python -u test_net.py --def ../models/tianchi/VGG16/faster_rcnn_end2end/test.pro
 # Contributors
 Yu Wu : YiYuan Intelligent co-founder <br>
 Shaohuai Shi : Hong Kong Baptist University, Phd<br>
-Xiaochen CHen : he Hong Kong University of Science and Technology, Master
+Xiaochen Chen : Hong Kong University of Science and Technology, Master
