@@ -1,6 +1,6 @@
-This is an intel-extended caffe based 3D faster RCNN RPN training framework, which we believe is the first training framework that makes 3D faster RCNN RPN with 150-layer Deep Convolutional Network converged in CT images.
- 
-The model has achieved good performance on Alibaba TIANCHI Healthcare AI Competition data (medical imaging prediction of lung nodule). You are welcome to modify it to GPU version. This open-source project is developed by Shenzhen Yiyuan Intelligence Tech Co., LTD and Hong Kong Baptist University (HKBU) GPU High Performance Computing Laboratory.
+&emsp;&emsp;This is an intel-extended caffe based 3D faster RCNN RPN training framework, which we believe is the first training framework that makes 3D faster RCNN RPN with 150-layer Deep Convolutional Network converged in CT images.
+&emsp;&emsp;The model has achieved good performance on Alibaba TIANCHI Healthcare AI Competition data (medical imaging prediction of lung nodule). You are welcome to modify it to GPU version. 
+&emsp;&emsp;This open-source project is developed by Shenzhen Yiyuan Intelligence Tech Co., LTD and Hong Kong Baptist University (HKBU) GPU High Performance Computing Laboratory.
 
 # 网络定义
 网络定义位于models/tianchi/VGG16/faster_rcnn_end2end/train.prototxt，同时定义了数据输入层，位于lib/roi_data_layer/layer.py，在setup函数指定了网络输入图像为batchsize\*1\*x\*y\*z的3D图像数据。
