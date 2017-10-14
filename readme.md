@@ -31,3 +31,7 @@ python -u val_net.py --solver ../models/tianchi/VGG16/faster_rcnn_end2end/solver
 ```
 python -u test_net.py --def ../models/tianchi/VGG16/faster_rcnn_end2end/test.prototxt --net ../output/faster_rcnn_end2end/tianchi_faster_rcnn_iter_2204.caffemodel --imdb tianchi_test --cfg ../experiments/cfgs/faster_rcnn_end2end.yml --max_per_image 1
 ```
+# Contributors
+Yu Wu : YiYuan Intelligent co-founder
+Shaohuai Shi : Hong Kong Baptist University, Phd
+Xiaochen CHen : he Hong Kong University of Science and Technology, Master
