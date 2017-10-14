@@ -23,9 +23,7 @@ ImageSets文件夹是存放数据引用，在后续中会通过指定 imdb 来�
 python -u train_net.py --solver ../models/tianchi/VGG16/faster_rcnn_end2end/solver.prototxt --imdb_train tianchi_train --imdb_val tianchi_val --iters 70000 --cfg ../experiments/cfgs/faster_rcnn_end2end.yml --rand
 ```
 模型生成在output/faster_rcnn_end2end/tianchi_train下面<br>
-使用pretrained_model
-```
-python -u train_net.py --solver ../models/tianchi/VGG16/faster_rcnn_end2end/solver.prototxt --weights ../output/faster_rcnn_end2end/tianchi_train/tianchi_faster_rcnn_epoch_1083.caffemodel --imdb_train tianchi_train --imdb_val tianchi_val --iters 70000 --cfg ../experiments/cfgs/faster_rcnn_end2end.yml --rand
+
 ```
 遍历所有模型，计算在验证集的tnr和tpr。
 ```
