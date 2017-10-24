@@ -1,7 +1,7 @@
 # Lung Nodule Detection in CT Images Using 3D faster RCNN #
 This is an intel-extended caffe based 3D faster RCNN RPN training framework, which we believe is the first training framework that makes 3D faster RCNN RPN with 150-layer Deep Convolutional Network converged in CT images.
 
-The model has achieved good performance on [https://tianchi.aliyun.com/competition/introduction.htm?spm=5176.100068.5678.1.1722b13em5oGst&raceId=231601](Alibaba Tianchi Healthcare AI Competition) data (medical imaging prediction of lung nodule). You are welcome to modify it to GPU version.
+The model has achieved good performance on Alibaba Tianchi Healthcare AI [https://tianchi.aliyun.com/competition/introduction.htm?spm=5176.100068.5678.1.1722b13em5oGst&raceId=231601](Competition) data (medical imaging prediction of lung nodule). You are welcome to modify it to GPU version.
 
 This open-source project is developed by Shenzhen Yiyuan Intelligence Tech Co., LTD and Hong Kong Baptist University (HKBU) GPU High Performance Computing Laboratory.
 
@@ -30,7 +30,7 @@ Maybe you need a good server with Intel CPUs to support you to run the training 
 Data preparation
 ----------------
 ### Original Dataset ###
-The original lung CT images can be found on the [https://tianchi.aliyun.com/competition/information.htm?spm=5176.100068.5678.2.142fc24cdJGXkU&raceId=231601](Tianchi website)and there are detailed introduction about the dataset, so we don't repeat the information here.  
+The original lung CT images can be found on the [https://tianchi.aliyun.com/competition/information.htm?spm=5176.100068.5678.2.142fc24cdJGXkU&raceId=231601](Tianchi website) and there are detailed introduction about the dataset, so we don't repeat the information here.  
 
 ### Preprocessing ###
 After you download the original dataset, it should be preprocessed to achieve higher accuracy. The preprocess method we use is not complicated. Since there are lots of usefulness information out of a lung for nodule detection, the main trick we do here is that we just segment the lung from the original image in every CT slide. The comparison of CT slides between before and after lung segmentation is shown as follows:
