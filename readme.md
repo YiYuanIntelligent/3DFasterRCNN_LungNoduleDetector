@@ -1,7 +1,7 @@
 # Lung Nodule Detection in CT Images Using 3D faster RCNN #
 This is an intel-extended caffe based 3D faster RCNN RPN training framework, which we believe is the first training framework that makes 3D faster RCNN RPN with 150-layer Deep Convolutional Network converged in CT images.
 
-The model has achieved good performance on [Alibaba Tianchi Healthcare AI Competition](https://tianchi.aliyun.com/competition/introduction.htm?spm=5176.100068.5678.1.1722b13em5oGst&raceId=231601] data (medical imaging prediction of lung nodule). You are welcome to modify it to GPU version.
+The model has achieved good performance on [Alibaba Tianchi Healthcare AI Competition](https://tianchi.aliyun.com/competition/introduction.htm?spm=5176.100068.5678.1.1722b13em5oGst&raceId=231601) data (medical imaging prediction of lung nodule). You are welcome to modify it to GPU version.
 
 This open-source project is developed by Shenzhen Yiyuan Intelligence Tech Co., LTD and Hong Kong Baptist University (HKBU) GPU High Performance Computing Laboratory.
 
