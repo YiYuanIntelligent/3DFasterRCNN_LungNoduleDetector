@@ -36,3 +36,5 @@ python -u test_net.py --def ../models/tianchi/VGG16/faster_rcnn_end2end/test.pro
 Yu Wu : YiYuan Intelligent co-founder <br>
 Shaohuai Shi : Hong Kong Baptist University, Phd<br>
 Xiaochen Chen : Hong Kong University of Science and Technology, Master
+
+(https://github.com/YiYuanIntelligent/3DFasterRCNN_LungNoduleDetector/blob/master/WechatIMG3.jpeg)
