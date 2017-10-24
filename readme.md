@@ -37,4 +37,4 @@ Yu Wu : YiYuan Intelligent co-founder <br>
 Shaohuai Shi : Hong Kong Baptist University, Phd<br>
 Xiaochen Chen : Hong Kong University of Science and Technology, Master
 
-(https://github.com/YiYuanIntelligent/3DFasterRCNN_LungNoduleDetector/blob/master/WechatIMG3.jpeg)
+![](https://github.com/YiYuanIntelligent/3DFasterRCNN_LungNoduleDetector/blob/master/WechatIMG3.jpeg)
