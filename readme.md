@@ -7,9 +7,15 @@ This open-source project is developed by Shenzhen Yiyuan Intelligence Tech Co., 
 
 Authors
 ------------
-- Yu Wu: YiYuan Intelligent co-founder
-- Shaohuai Shi: Hong Kong Baptist University, Phd Candidate
-- Xiaochen Chen: Hong Kong University of Science and Technology, Master
+- WU Yu
+  - Co-founder of Shenzhen Yi-Yuan Intelligence Tech Co., LTD. Formerly with best ad’s pCTR team of Tencent.
+  - Responsible for: model training, nodule-detecting framework constructing and overall optimizing strategy planning.
+- SHI Shaohuai
+  - Hong Kong Baptist University, GPU High Performance Computing Laboratory, PhD student. Series Winner of NVIDIA National CUDA Contest (Highest Contribution Prize and First Prize).
+  - Responsible for: model optimization (which has made significant development for several times) and model-selecting strategy planning.
+- CHEN Xiaochen
+  - Hong Kong University of Science and Technology (HKUST), Master Degree.
+  - Major Caffe code contributor of this competition.
 
 Dependencies
 ------------
