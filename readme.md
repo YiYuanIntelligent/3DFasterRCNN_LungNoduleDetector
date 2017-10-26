@@ -38,6 +38,10 @@ After you download the original dataset, it should be preprocessed to achieve hi
 ![Original](https://github.com/YiYuanIntelligent/3DFasterRCNN_LungNoduleDetector/blob/master/original_slice.jpg)
 ![Processed](https://github.com/YiYuanIntelligent/3DFasterRCNN_LungNoduleDetector/blob/master/preprocessed_slice.jpg)
 
+Our　preprocessing codes refers to: <br>
+grt123's code　https://github.com/lfz/DSB2017<br>
+kaggle tutorail https://github.com/booz-allen-hamilton/DSB3Tutorial<br>
+
 ##### Lung Segmentation ####
 ```
 Train Set：python lungSeg.py trainPath train_result_path
