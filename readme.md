@@ -112,7 +112,7 @@ At the last step, we would like to detect the nudules on the test dataset whose 
 $cd tools
 $python -u test_net.py --def ../models/tianchi/unet_resnet150/faster_rcnn_end2end/test.prototxt --net ../output/faster_rcnn_end2end/tianchi_faster_rcnn_iter_2204.caffemodel --imdb tianchi_test --cfg ../experiments/cfgs/faster_rcnn_end2end.yml --max_per_image 1
 ```
-The detected results are saved in the directory of ??
+The detected results are saved in the directory of `output/faster_rcnn_end2end/tianchi_test/${model_name}`
 
 Acknowledgements
 ----------------
