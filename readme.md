@@ -3,7 +3,7 @@ This is an intel-extended caffe based 3D faster RCNN RPN training framework, whi
 
 The model has achieved good performance on [Alibaba Tianchi Healthcare AI Competition](https://tianchi.aliyun.com/competition/introduction.htm?spm=5176.100068.5678.1.1722b13em5oGst&raceId=231601) data (medical imaging prediction of lung nodule). You are welcome to modify it to GPU version.
 
-This open-source project is developed by Shenzhen Yiyuan Intelligence Tech Co., LTD and Hong Kong Baptist University (HKBU) GPU High Performance Computing Laboratory.
+This open-source project is developed by Shenzhen Yiyuan Intelligence Tech Co., LTD and Hong Kong Baptist University, GPU High Performance Computing Laboratory.
 
 Authors
 ------------
@@ -36,7 +36,7 @@ Maybe you need a good server with Intel CPUs to support you to run the training 
 Data preparation
 ----------------
 ### Original Dataset ###
-The original lung CT images can be found on the [Tianchi website](https://tianchi.aliyun.com/competition/information.htm?spm=5176.100068.5678.2.142fc24cdJGXkU&raceId=231601) and there are detailed introduction about the dataset, so we don't repeat the information here.  
+The original lung CT images can be found on the [Tianchi website](https://tianchi.aliyun.com/competition/information.htm?spm=5176.100068.5678.2.142fc24cdJGXkU&raceId=231601) and there are detailed introductions about the dataset, so we don't repeat the information here.  
 
 ### Preprocessing ###
 After you download the original dataset, it should be preprocessed to achieve higher accuracy. The preprocess method we use is not complicated. Since there are lots of usefulness information out of a lung for nodule detection, the main trick we do here is that we just segment the lung from the original image in every CT slide. The comparison of CT slides between before (left) and after (right) lung segmentation is shown as follows:
@@ -44,7 +44,7 @@ After you download the original dataset, it should be preprocessed to achieve hi
 ![Original](https://github.com/YiYuanIntelligent/3DFasterRCNN_LungNoduleDetector/blob/master/original_slice.jpg)
 ![Processed](https://github.com/YiYuanIntelligent/3DFasterRCNN_LungNoduleDetector/blob/master/preprocessed_slice.jpg)
 
-Our　preprocessing codes refers to: <br>
+Our preprocessing codes refer to: <br>
 grt123's code　https://github.com/lfz/DSB2017<br>
 kaggle tutorail https://github.com/booz-allen-hamilton/DSB3Tutorial<br>
 
@@ -83,7 +83,7 @@ Note: The edge of the lung is obvious, so it is not hard to segment the lung. Bu
 
 Our model
 -------------------------
-Inspired by some state-of-the-art frameworks in the areas of object detection, image segmentation and image classification with deep learning techniques. We combine Faster-RCNN, UNet, and ResBlock from RetNet to design our deep model (PS: we have not a name for it yet, maybe latter). The architecture of the model is shown as follows:
+Inspired by some state-of-the-art frameworks in the areas of object detection, image segmentation and image classification with deep learning techniques. We combine Faster-RCNN, UNet, ResBlock from ResNet and detector model from kaggle winner [grt123](https://github.com/lfz/DSB2017) to design our deep model (PS: we have not a name for it yet, maybe latter). The architecture of the model is shown as follows:
 
 ![](https://github.com/YiYuanIntelligent/3DFasterRCNN_LungNoduleDetector/blob/master/model.png)
 
@@ -122,7 +122,7 @@ The detected results are saved in the directory of `output/faster_rcnn_end2end/t
 
 Acknowledgements
 ----------------
-We would like to thank Alibaba to conduct the AI competition with valuable dataset. We also thank Intel technical support team in this Tianchi competition, and their provided high performance computing platforms including Intel Xeon Phi and Extended-Caffe. In addition, many thanks to the authors of [py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn).
+We would like to thank Alibaba to conduct the AI competition with valuable dataset. We also thank Intel technical support team in this Tianchi competition, and their provided high performance computing platforms including Intel Xeon Phi and Extended-Caffe. In addition, many thanks to the authors of [py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn) and [DSB2017](https://github.com/lfz/DSB2017).
 
 
 ![](https://github.com/YiYuanIntelligent/3DFasterRCNN_LungNoduleDetector/blob/master/WechatIMG3.jpeg)
