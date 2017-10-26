@@ -75,7 +75,7 @@ Our model
 -------------------------
 Inspired by some state-of-the-art frameworks in the areas of object detection, image segmentation and image classification with deep learning techniques. We combine Faster-RCNN, UNet, and ResBlock from RetNet to design our deep model (PS: we have not a name for it yet, maybe latter). The architecture of the model is shown as follows:
 
-![](https://github.com/YiYuanIntelligent/3DFasterRCNN_LungNoduleDetector/blob/master/model.jpg)
+![](https://github.com/YiYuanIntelligent/3DFasterRCNN_LungNoduleDetector/blob/master/model.png)
 
 You can also have the details of the model via: ``models/tianchi/unet_resnet150/faster_rcnn_end2end/train.prototxt`` or (Visuable Model)[http://ethereon.github.io/netscope/#/gist/79d90c41d3a4389dc1adbf101b2a1f02].
 
