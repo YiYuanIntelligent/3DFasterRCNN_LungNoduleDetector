@@ -7,18 +7,18 @@ This open-source project is developed by Shenzhen Yiyuan Intelligence Tech Co., 
 
 Authors
 ------------
-- Yu Wu: YiYuan Intelligent co-founder 
+- Yu Wu: YiYuan Intelligent co-founder
 - Shaohuai Shi: Hong Kong Baptist University, Phd Candidate
 - Xiaochen Chen: Hong Kong University of Science and Technology, Master
 
 Dependencies
------------- 
+------------
 ## Software ##
 - [Intel Extended Caffe](https://github.com/extendedcaffe/extended-caffe)
 
 It is a highly optimized deep learning framework running on Intel CPUs like Intel Xeon Phi, and it supports many 3D layers (e.g., 3D convolution/deconvolution, 3D batch normalization, etc.). Please follow the installation instruction of extended-caffe, and make sure that ``MKLML engine`` and ``pycaffe`` have been installed successfully. Please be noted this is a not GPU-based platform, any PRs which help migrate this project to [BVLC/Caffe](https://github.com/BVLC/caffe) are welcome.
 
-- Python Dependencies 
+- Python Dependencies
 
 All the python dependencies are list in ``requirements.txt``, Please make the packages have been installed in your python environment, or you can just run the following command in the root directory of the project to install all the dependencies:
 
@@ -48,7 +48,7 @@ Train Set：python make_label.py tarin
 Val Set：python make_label.py val
 Test Set：python make_label.py test
 
-Every patient may have 200-500 CT slides. All the slides are needed to do lung segmentation. The preprocessed CT slides of a patient are saved in one ``$patientID_clean.npy`` file, and its ground truth is saved as ``$patientID_label.npy``. The format of ``npy`` is a ``numpy`` array which is easy to read when training. The following example shows what the ``npy`` files look like: 
+Every patient may have 200-500 CT slides. All the slides are needed to do lung segmentation. The preprocessed CT slides of a patient are saved in one ``$patientID_clean.npy`` file, and its ground truth is saved as ``$patientID_label.npy``. The format of ``npy`` is a ``numpy`` array which is easy to read when training. The following example shows what the ``npy`` files look like:
 
 ```
 >>> import numpy as np
@@ -74,8 +74,8 @@ Our model
 Inspired by some state-of-the-art frameworks in the areas of object detection, image segmentation and image classification with deep learning techniques. We combine Faster-RCNN, UNet, and ResBlock from RetNet to design our deep model (PS: we have not a name for it yet, maybe latter). The architecture of the model is shown as follows:
 
 ![](https://github.com/YiYuanIntelligent/3DFasterRCNN_LungNoduleDetector/blob/master/model.jpg)
- 
-You can also have the details of the model via: ``models/tianchi/VGG16/faster_rcnn_end2end/train.prototxt`` or (Visuable Model)[http://ethereon.github.io/netscope/#/gist/79d90c41d3a4389dc1adbf101b2a1f02].
+
+You can also have the details of the model via: ``models/tianchi/unet_resnet150/faster_rcnn_end2end/train.prototxt`` or (Visuable Model)[http://ethereon.github.io/netscope/#/gist/79d90c41d3a4389dc1adbf101b2a1f02].
 
 Usage
 -----
@@ -85,18 +85,18 @@ To train the detector, run:
 
 ```
 $cd tools
-$python -u train_net.py --solver ../models/tianchi/VGG16/faster_rcnn_end2end/solver.prototxt --imdb_train tianchi_train --imdb_val tianchi_val --iters 70000 --cfg ../experiments/cfgs/faster_rcnn_end2end.yml --rand
+$python -u train_net.py --solver ../models/tianchi/unet_resnet150/faster_rcnn_end2end/solver.prototxt --imdb_train tianchi_train --imdb_val tianchi_val --iters 70000 --cfg ../experiments/cfgs/faster_rcnn_end2end.yml --rand
 ```
 
 The trained models will be saved every epoch in the directory: ``./output/faster_rcnn_end2end/tianchi_train``.
 
 - Model Selection
 
-Due to the training speed of the model, we separate the validation as an independent part. Based on the generated models above, we can traverse all the models to do validation with validation set, and the values of TPR (true positive rate) and TNR (true negative rate) are recorded in the log file or the console. In general, the model with the highest TPR and TNR are chosen as the best model to do testing on the test dataset. To traverse the models, run: 
+Due to the training speed of the model, we separate the validation as an independent part. Based on the generated models above, we can traverse all the models to do validation with validation set, and the values of TPR (true positive rate) and TNR (true negative rate) are recorded in the log file or the console. In general, the model with the highest TPR and TNR are chosen as the best model to do testing on the test dataset. To traverse the models, run:
 
 ```
 $cd tools
-$python -u val_net.py --solver ../models/tianchi/VGG16/faster_rcnn_end2end/solver_val.prototxt --imdb_train tianchi_train --imdb_val tianchi_val --iters 70000 --cfg ../experiments/cfgs/faster_rcnn_end2end.yml --rand
+$python -u val_net.py --solver ../models/tianchi/unet_resnet150/faster_rcnn_end2end/solver_val.prototxt --imdb_train tianchi_train --imdb_val tianchi_val --iters 70000 --cfg ../experiments/cfgs/faster_rcnn_end2end.yml --rand
 ```
 
 - Detecting with unlabeled data
@@ -104,7 +104,7 @@ $python -u val_net.py --solver ../models/tianchi/VGG16/faster_rcnn_end2end/solve
 At the last step, we would like to detect the nudules on the test dataset whose ground truth are unknown. Just run:
 ```
 $cd tools
-$python -u test_net.py --def ../models/tianchi/VGG16/faster_rcnn_end2end/test.prototxt --net ../output/faster_rcnn_end2end/tianchi_faster_rcnn_iter_2204.caffemodel --imdb tianchi_test --cfg ../experiments/cfgs/faster_rcnn_end2end.yml --max_per_image 1
+$python -u test_net.py --def ../models/tianchi/unet_resnet150/faster_rcnn_end2end/test.prototxt --net ../output/faster_rcnn_end2end/tianchi_faster_rcnn_iter_2204.caffemodel --imdb tianchi_test --cfg ../experiments/cfgs/faster_rcnn_end2end.yml --max_per_image 1
 ```
 The detected results are saved in the directory of ??
 
