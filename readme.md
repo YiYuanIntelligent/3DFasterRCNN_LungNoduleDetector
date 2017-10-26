@@ -7,7 +7,7 @@ This open-source project is developed by Shenzhen Yiyuan Intelligence Tech Co., 
 
 Authors
 ------------
-- WU Yu: tkots.wu@gmail.com
+- WU Yu:tkots_wu@sina.com
   - Co-founder of Shenzhen Yi-Yuan Intelligence Tech Co., LTD. Formerly with best ad’s pCTR team of Tencent.
   - Responsible for: model training, nodule-detecting framework constructing and overall optimizing strategy planning.
 - SHI Shaohuai
