@@ -38,16 +38,18 @@ After you download the original dataset, it should be preprocessed to achieve hi
 ![Original](https://github.com/YiYuanIntelligent/3DFasterRCNN_LungNoduleDetector/blob/master/original_slice.jpg)
 ![Processed](https://github.com/YiYuanIntelligent/3DFasterRCNN_LungNoduleDetector/blob/master/preprocessed_slice.jpg)
 
-####Lung Segmentation####
+##### Lung Segmentation ####
+```
 Train Set：python lungSeg.py trainPath train_result_path
 Val Set：python lungSeg.py valPath val_result_path
 Test Set：python lungSeg.py testPath test_result_path
-
-####Create label file####
-Train Set：python make_label.py tarin
+```
+#### Create label file ####
+```
+Train Set：python make_label.py train
 Val Set：python make_label.py val
 Test Set：python make_label.py test
-
+```
 Every patient may have 200-500 CT slides. All the slides are needed to do lung segmentation. The preprocessed CT slides of a patient are saved in one ``$patientID_clean.npy`` file, and its ground truth is saved as ``$patientID_label.npy``. The format of ``npy`` is a ``numpy`` array which is easy to read when training. The following example shows what the ``npy`` files look like: 
 
 ```
