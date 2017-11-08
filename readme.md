@@ -121,5 +121,3 @@ The detected results are saved in the directory of `output/faster_rcnn_end2end/t
 Acknowledgements
 ----------------
 We would like to thank Alibaba to conduct the AI competition with valuable dataset. We also thank Intel technical support team in this Tianchi competition, and their provided high performance computing platforms including Intel Xeon Phi and Extended-Caffe. In addition, many thanks to the authors of [py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn) and [DSB2017](https://github.com/lfz/DSB2017).
-
-![](https://github.com/YiYuanIntelligent/3DFasterRCNN_LungNoduleDetector/blob/master/583552300.jpg)
